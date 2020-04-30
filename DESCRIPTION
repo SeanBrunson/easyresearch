@@ -1,0 +1,21 @@
+Package: easyresearch
+Type: Package
+Title: A Bunch of Functions To Help Streamline Papers
+Version: 0.1.0
+Author: Sean Brunson
+Maintainer: The package maintainer <sean.brunson25@gmail.com>
+Description: Mostly contains formatting functions for plots and tables.
+    Also contains some useful PDF templates for final papers and presentations.
+URL: https://github.com/SeanBrunson/easyresearch
+License: MIT LICENSE
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.1.1
+Imports: 
+        tidyverse,
+        broom,
+        lmtest,
+        sandwich,
+        openxlsx,
+        bookdown,
+        rmarkdown

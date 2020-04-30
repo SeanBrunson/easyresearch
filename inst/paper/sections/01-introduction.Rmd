@@ -1,0 +1,12 @@
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
+options(knitr.kable.NA = '')
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+knitr::opts_knit$set(root.dir = normalizePath('./'),
+                     child.path = "paper/")
+```
+
+# Introduction {-}
+This is a test citation, which can be found in paper/tex/citations.bib
+@Mills19
+
+The rest of the paper is as follows but you can create whatever section you want: Section \@ref(data) discusses the data, Section \@ref(methodology) discusses the main methodology used, Section \@ref(results) discusses the results, and Section \@ref(conclusion) includes the closing remarks.

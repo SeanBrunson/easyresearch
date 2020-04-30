@@ -1,0 +1,68 @@
+\input{paper/tex/params}
+
+\usepackage{floatrow}
+\floatsetup[figure]{capposition=top}
+\floatsetup[table]{capposition=top}
+\usepackage{lscape}
+\newcommand{\blandscape}{\begin{landscape} \pagestyle{plain}}
+\newcommand{\elandscape}{\end{landscape}}
+\usepackage{alltt} % for knitr code output
+\usepackage{etoolbox} % for toggle
+\usepackage{fullpage}
+\usepackage{nomencl} % for the nomenclature (List of Abbreviations)
+\usepackage{amsmath, amsfonts, amssymb, amsthm}
+\usepackage{amsbsy,bm} 
+\usepackage{lmodern} % Latin modern fonts
+\usepackage[T1]{fontenc} % font encodings
+\usepackage{framed} % for knitr code output
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{caption}
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage[table]{xcolor}
+\usepackage{float}
+\usepackage{colortbl} % allows coloring of individual cells
+\usepackage{apacite}
+\usepackage{natbib}
+\usepackage{mathtools} % allows split fractions
+\usepackage{indentfirst} % Indent first paragraph at beginning of section
+\usepackage{subfig} % This one is required by something else
+\usepackage[titletoc,title]{appendix}
+%\usepackage[tocgraduated]{tocstyle} % This package is still in alpha, but we need it for VU
+\usepackage{array}
+\usepackage{listings} % Typeset source code listings using LATEX
+\usepackage{makeidx}
+\usepackage{booktabs}
+\usepackage[subfigure, titles]{tocloft} % lets us format TOC for VU
+\usepackage[nottoc,notlof,notlot]{tocbibind}
+\usepackage{pdflscape}
+\usepackage{longtable, tabu}
+\usepackage{threeparttable}
+\usepackage{threeparttablex}
+\usepackage[bottom]{footmisc}
+\usepackage{makecell}
+\doublespacing
+\AtBeginDocument{
+    \renewcommand{\BBOP}{}
+    \renewcommand{\BBCP}{}
+    \renewcommand{\BBAA}{and}
+                } %Needed to format references nicely
+                
+\setcounter{section}{1} %Needed to start section numbering at 2
+
+\usepackage{placeins} % for \FloatBarrier
+\hypersetup{
+    bookmarksnumbered=false, % true means bookmarks in left window are numbered
+    bookmarksopen=false,     % true means only level 1 is displayed.
+    colorlinks=true,         % false: boxed links; true: colored links
+    linkcolor=black,          % color of internal links
+    citecolor=black,          
+    urlcolor=black,          
+    pdfstartview=FitH
+}
+
+\usepackage[margin=2cm]{geometry} %Used to make multi-panel tables
+\usepackage{tabularx} %Used to make multi-panel tables
+\usepackage{booktabs} %Used to make multi-panel tables
+\newcolumntype{Y}{>{\raggedleft\arraybackslash}X} %Used to make multi-panel tables

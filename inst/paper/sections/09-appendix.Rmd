@@ -1,0 +1,21 @@
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
+options(knitr.kable.NA = '')
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+knitr::opts_knit$set(root.dir = normalizePath('./'),
+                     child.path = "paper/tables/")
+```
+
+\clearpage
+\newpage
+
+\setcounter{table}{0}
+\renewcommand{\thetable}{A\arabic{table}}
+\setcounter{figure}{0}
+\renewcommand{\thefigure}{A\arabic{figure}}
+\setcounter{equation}{0}
+\renewcommand{\theequation}{A\arabic{equation}}
+
+# Appendix {-}
+
+\setlength{\parindent}{15pt}
+\setlength{\leftskip}{0in}

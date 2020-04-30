@@ -1,0 +1,51 @@
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
+options(knitr.kable.NA = '')
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+```
+
+\clearpage
+```{r, results='asis'}
+table_test <- function(){
+    library(easyresearch)
+    import_library("tidyverse")
+    import_library("readxl")
+    import_library("kableExtra")
+    
+    # Setup file name:
+    partial_file_name <- ""
+    file_name <- grep(partial_file_name,
+                      list.files("results", full.names = TRUE), value = TRUE)
+    
+    # Table sample:
+    df <- dplyr::tibble(x = 1:10,
+                        y = x*2)
+    
+    # Get row to put horizontal line:
+    get_rows <- df$x %>%
+        tibble::enframe(name = NULL) %>%
+        mutate(n = row_number()) %>%
+        filter(str_detect(value, "Intercept")) %>%
+        select(n) %>%
+        .[[1]] + 1
+    
+    # Create table:
+    footnote_comment <- paste0("*** indicates significance at the 1\\\\% level, ",
+                               "** indicates significance at the 5\\\\% level, ",
+                               "* indicates significance at the 10\\\\% level")
+    
+    footnote_comment2 <- paste0("The log sale price is the independent variable in each regression. Each regression also includes housing characteristics, transaction type, zip code fixed effects, and quarter-year fixed effects. t-statistics are in parenthesis.")
+    
+    df %>%
+        knitr::kable(format = "latex",
+                     align = c("l", rep("c", ncol(df) - 1)),
+                     caption = "\\label{tab:tab-label}Table Name",
+                     booktabs = T, escape = F, linesep = "") %>%
+        kableExtra::row_spec(get_rows, hline_after = T) %>%
+        kableExtra::kable_styling(latex_options = c("scale_down")) %>%
+        kableExtra::footnote(general = footnote_comment,
+                             alphabet = c(footnote_comment2),
+                             threeparttable = T, escape = F)
+}
+
+table_test()
+```

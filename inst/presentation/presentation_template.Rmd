@@ -1,0 +1,40 @@
+---
+bibliography: ../paper/tex/citations.bib
+title: 'Wall Street, Main Street, Your Street: How Investors Impact the Single-Family Housing Market'
+short-title: "Wall Street, Main Street, Your Street"
+author: "Sean Brunson"
+short-author: "Sean Brunson"
+institute: "University of North Carolina at Charlotte"
+short-institute: "UNCC"
+date: '`r format(Sys.Date(), "%B %d, %Y")`'
+short-date: '`r format(Sys.Date(), "%m/%d/%Y")`'
+section-titles: false
+safe-columns: true
+output: 
+  easyresearch::beamer_uncc
+---
+
+```{r setup, echo = FALSE, message = FALSE, warning = FALSE}
+options(knitr.kable.NA = '')
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+knitr::opts_knit$set(root.dir = normalizePath('../'),
+                     child.path = "paper/")
+suppressWarnings(library(tidyverse))
+suppressWarnings(library(readxl))
+suppressWarnings(library(lubridate))
+suppressWarnings(library(kableExtra))
+suppressWarnings(library(ggpubr))
+suppressWarnings(library(easyresearch))
+```
+
+# Header in PDF Side Bar
+
+## Subsection Header
+### Title Slide
+* Bullet 1
+
+<br />
+
+* Bullet 2
+
+# References

@@ -1,0 +1,12 @@
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
+options(knitr.kable.NA = '')
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+knitr::opts_knit$set(root.dir = normalizePath('./'),
+                     child.path = "paper/tables/")
+```
+
+\clearpage
+\newpage
+
+```{r, child = "table01_template.Rmd"}
+```

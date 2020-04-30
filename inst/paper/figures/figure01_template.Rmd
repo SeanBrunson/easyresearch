@@ -1,0 +1,34 @@
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
+options(knitr.kable.NA = '')
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+```
+
+```{r, fig.cap = "\\label{fig:fig-label}Figure Name"}
+plot_test <- function(){
+    library(easyresearch)
+    import_library("tidyverse")
+    import_library("readxl")
+    import_library("ggpubr")
+    
+    # Setup file name:
+    partial_file_name <- ""
+    file_name <- grep(partial_file_name,
+                      list.files("results", full.names = TRUE), value = TRUE)
+    
+    # Plot sample:
+    plot_df <- tibble(x = 1:10,
+                      y = (1:10)^2) %>%
+        ggplot(aes(x = x, y = y)) + geom_line() + geom_point() +
+        make_minimum_background()
+    
+    # Combine plots:
+    footnote_comment <- paste0("This is a figure footnote")
+    
+    final_plot <- ggarrange(plot_df, nrow = 1, align = "v")
+    
+    ggarrange(final_plot, ggparagraph(footnote_comment), nrow = 2,
+              heights = c(10, 1), align = "hv")
+}
+
+plot_test()
+```

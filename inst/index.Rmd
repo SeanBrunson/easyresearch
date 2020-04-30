@@ -1,0 +1,20 @@
+--- 
+bibliography: paper/tex/citations.bib
+date: "`r format(Sys.Date(), format = '%B %e, %Y')`"
+output:
+  bookdown::pdf_book:
+    fig_width: 10
+    fig_height: 14 
+    toc: no
+    keep_tex: false
+    template: null
+    includes:
+      in_header: paper/tex/preamble.tex
+documentclass: article
+classoption: a4paper
+fontsize: 12pt
+fig_caption: true
+subparagraph: yes
+link-citations: true
+biblio-style: apalike
+---

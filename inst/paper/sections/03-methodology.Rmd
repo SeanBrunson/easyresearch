@@ -1,0 +1,14 @@
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
+options(knitr.kable.NA = '')
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+knitr::opts_knit$set(root.dir = normalizePath('./'),
+                     child.path = "paper/")
+```
+
+# Methodology
+This is a practice equation:
+
+\begin{align} 
+    p_{i,t} = \beta_{0} &+ \beta \mathbf{X}_{i,t} + \delta_{1} Purchased By_{i,t} + \delta_{2} REO_{i,t} + \nonumber \\
+    & \delta_{3} NoMortgage_{i,t} + \delta_{4} RIA_{C,[t-1,t-6]} + ZC_{i} + QY_{t} + \epsilon_{i,t} (\#eq:main-hedonic)
+\end{align}

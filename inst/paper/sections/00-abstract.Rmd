@@ -1,0 +1,26 @@
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
+options(knitr.kable.NA = '')
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+knitr::opts_knit$set(root.dir = normalizePath('./'),
+                     child.path = "paper/")
+```
+
+\setlength{\parindent}{1cm}
+
+\begin{singlespace}
+    \begin{titlepage}
+        \title{Title}
+        \author{Name\thanks{Affiliation, Email}}
+        \maketitle
+
+        \begin{abstract}
+        \noindent
+            Put abstract here
+        \end{abstract}
+
+        \setcounter{page}{0}
+        \thispagestyle{empty}
+    \end{titlepage}
+\end{singlespace}
+
+\setlength{\parskip}{0pt}
