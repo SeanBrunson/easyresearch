@@ -7,14 +7,6 @@
 #'  Beamer themed template.
 #' @export
 #' @author RStudio RMarkdown Team (Everything) & Sean Brunson (Theme hook + Beamer Theme)
-#' @examples
-#' \dontrun{
-#' # Generate slide deck from beamer template
-#' rmarkdown::draft("slide_deck.Rmd", template = "beamer_illinois", package = "uiucthemes")
-#'
-#' # Compile the document
-#' rmarkdown::render("slide_deck/slide_deck.Rmd")
-#' }
 
 beamer_uncc <- function(toc = FALSE,
                         slide_level = 3,

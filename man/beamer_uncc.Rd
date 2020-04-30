@@ -80,15 +80,6 @@ A modified \code{beamer_presentation} based on the "Charlotte" (UNCC)
 Generates from a RMarkdown file a Beamer presentation with "Charlotte" (UNCC)
 colors and identity standards.
 }
-\examples{
-\dontrun{
-# Generate slide deck from beamer template
-rmarkdown::draft("slide_deck.Rmd", template = "beamer_illinois", package = "uiucthemes")
-
-# Compile the document
-rmarkdown::render("slide_deck/slide_deck.Rmd")
-}
-}
 \author{
 RStudio RMarkdown Team (Everything) & Sean Brunson (Theme hook + Beamer Theme)
 }
